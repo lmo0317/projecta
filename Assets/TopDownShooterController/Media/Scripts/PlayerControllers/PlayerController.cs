@@ -38,6 +38,7 @@ namespace TopDownShooter
             }
 
             CheckForVirtualJoystick();
+            //ShooterController.AddWeaponWhitBullets(1, 100);
         }
 
         public float GetHorizontalValue()
