@@ -61,7 +61,7 @@ public class MonsterCtrl : MonoBehaviour
     //private GameObject bloodEffect;
 
     // 몬스터 생명 변수
-    private int hp = 100;
+    //private int hp = 100;
 
     void OnEnable()
     {
@@ -251,9 +251,9 @@ public class MonsterCtrl : MonoBehaviour
             //ShowBloodEffect(pos, rot);
 
             // 몬스터의 hp 차감
-            hp -= 10;
+            CurrentHP -= 10;
 
-            if (hp <= 0)
+            if (CurrentHP <= 0)
             {
                 state = State.DIE;
             }
