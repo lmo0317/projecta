@@ -10,8 +10,8 @@ namespace TopDownShooter
 {
     public class HitPoint : MonoBehaviour
     {
-        public float MaxHitPoint = 100;
-        public float CurrentHitPoint = 0;
+        public float MaxHP = 100;
+        public float CurrentHP = 0;
 
         [Header("PopUpText Settings")] [Tooltip("PopUpText prefab")]
         public GameObject PopUpPrefab;
@@ -26,12 +26,12 @@ namespace TopDownShooter
 
         private void Awake()
         {
-            CurrentHitPoint = MaxHitPoint;
+            CurrentHP = MaxHP;
         }
 
         public void ApplyDamage(float amount)
         {
-            CurrentHitPoint -= amount;
+            CurrentHP -= amount;
             UpdatePointsBars();
 
             //if flash component exit start damage flash
@@ -47,16 +47,16 @@ namespace TopDownShooter
             }
 
             //if current hit point is <= 0 kill the player
-            if (CurrentHitPoint <= 0)
+            if (CurrentHP <= 0)
             {
-                CurrentHitPoint = 0;
+                CurrentHP = 0;
                 Dead();
             }
         }
 
         private void UpdatePointsBars()
         {
-            _hitRatio = CurrentHitPoint / MaxHitPoint;
+            _hitRatio = CurrentHP / MaxHP;
             CurrentHitPointImage.rectTransform.localScale = new Vector3(_hitRatio, 1, 1);
         }
 

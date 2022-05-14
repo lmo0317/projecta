@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9041122116208626079}
   - component: {fileID: 9041122116208626051}
-  - component: {fileID: 9041122116208626049}
+  - component: {fileID: 3455902420455271588}
   - component: {fileID: 9041122116208626078}
-  - component: {fileID: 9041122116208626052}
   - component: {fileID: 9041122116208626053}
+  - component: {fileID: 368223850927136809}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -51,7 +51,7 @@ CapsuleCollider:
   m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: -1, z: 0}
---- !u!114 &9041122116208626049
+--- !u!114 &3455902420455271588
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,16 +60,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 9041122116208626076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e7cc0e663758924e8cd2be289274923, type: 3}
+  m_Script: {fileID: 11500000, guid: 774dbf102e43c674898ea3893710f00f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHitPoint: 1000
-  CurrentHitPoint: 0
+  MaxHP: 100
+  CurrentHP: 0
   PopUpPrefab: {fileID: 1156348031185224, guid: 2ceac868d1282cc48bb98d72fb84f343, type: 3}
   PopUpTextColor: {r: 1, g: 0, b: 0, a: 1}
   FadeTime: 0.5
   CurrentHitPointImage: {fileID: 9041122116584759858}
   FlashOnDamage: {fileID: 9041122116208626078}
+  state: 0
+  traceDist: 10
+  attackDist: 2
+  isDie: 0
 --- !u!114 &9041122116208626078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,7 +81,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9041122116208626076}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b1767c1e5e33e241a8f17ea1624dfa7, type: 3}
   m_Name: 
@@ -86,20 +90,7 @@ MonoBehaviour:
   DamageBorderPulseAmount: 4
   DamageFadeDuration: 0.15
   BorderRenderers:
-  - {fileID: 0}
---- !u!114 &9041122116208626052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9041122116208626076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a433e871b9eae0342bf6aaa5914e1182, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  - {fileID: 1346225323313434672}
 --- !u!195 &9041122116208626053
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -122,6 +113,25 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &368223850927136809
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9041122116208626076}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 0d3c605385d6d9547a1e3f24e8248962, type: 3}
+  m_Controller: {fileID: 9100000, guid: cd7b2374db48ca24d83135d9719ffe3b, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9041122116213130388
 GameObject:
   m_ObjectHideFlags: 0
@@ -441,10 +451,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 95237074988894122, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
 --- !u!4 &1393194135077484024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4906828391645816, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
+  m_PrefabInstance: {fileID: 1388498550457988992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &1346225323313434672 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 137976475885954992, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
   m_PrefabInstance: {fileID: 1388498550457988992}
   m_PrefabAsset: {fileID: 0}

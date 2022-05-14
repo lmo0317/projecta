@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 114726647931884068}
   m_Layer: 0
   m_Name: NormalBullet
-  m_TagString: Untagged
+  m_TagString: BULLET
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,8 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamagePower: 0
-  BulletImpact: {fileID: 1765779786637028, guid: b2995efa08c8a594ea6c94b8ed53f063,
-    type: 3}
+  BulletImpact: {fileID: 1765779786637028, guid: b2995efa08c8a594ea6c94b8ed53f063, type: 3}
   ExplodeDamageBullet: 0
   DamageRadius: 0
   ExplosionForcePower: 0
@@ -140,6 +139,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -164,3 +164,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
