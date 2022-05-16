@@ -10,11 +10,12 @@ namespace TopDownShooter
 
         public float RotationSpeed = 3;
 
+        public Vector3 Offset;
+
         // The speed with which the camera will be following.
         public float Smoothing = 5f;
 
         // The initial offset from the target.
-        private Vector3 _offset;
 
         private bool _rotateToLeft;
         private bool _rotateToRight;
@@ -22,7 +23,7 @@ namespace TopDownShooter
 
         private void Start()
         {
-            _offset = transform.position - Target.position;
+            //_offset = transform.position - Target.position;
         }
 
         private void Update()
@@ -34,7 +35,7 @@ namespace TopDownShooter
 
         private void FixedUpdate()
         {
-            var targetCamPos = Target.position + _offset + Target.forward * SeeForward;
+            var targetCamPos = Target.position + Offset + Target.forward * SeeForward;
             transform.position = Vector3.Lerp(transform.position, targetCamPos, Smoothing * Time.deltaTime);
             if (_rotateToLeft) RotateToLeft();
             if (_rotateToRight) RotateToRight();
