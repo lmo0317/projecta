@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 413cbdfc712dbdf4f977cf74a7909b40, type: 3}
+  m_Name: PGGStartupRefs
+  m_EditorClassIdentifier: 
+  DemosPackage: {fileID: 102900000, guid: da0f13c16ae242f4da243a8557ebc665, type: 3}
+  QuickStartFile: {fileID: 102900000, guid: 25a78c3ebcbd4dc4f970e79d8a60d22d, type: 3}
+  ManualFile: {fileID: 102900000, guid: cdc0c68677589ca4f90e1a011fb18a44, type: 3}
+  PGGdirectory: {fileID: 102900000, guid: 1215681923b8d294e996b097130ccc7a, type: 3}
+  FSDraftsdirectory: {fileID: 102900000, guid: 8a7f563a225daef40812272ddadc5e05, type: 3}
+  FSModPackDraftsDirectory: {fileID: 102900000, guid: 0ca559bfcc4bf344697bba52b245815e,
+    type: 3}
+  StartupImage: {fileID: 2800000, guid: 42741f7eef4768947ab012d363aae6bf, type: 3}
