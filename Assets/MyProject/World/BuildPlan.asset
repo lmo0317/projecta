@@ -17,7 +17,7 @@ MonoBehaviour:
   RootChunkSetup:
     CustomName: 
     ID: 0
-    FieldSetup: {fileID: 11400000, guid: dcf66c3dfe0aef34e9f9693572dda7fd, type: 2}
+    FieldSetup: {fileID: 11400000, guid: 71817283f249ca14f9db528ae29d36f2, type: 2}
     Duplicates: 1
     DoorHoleCommandID: 0
     CenterFitDoor: 0
