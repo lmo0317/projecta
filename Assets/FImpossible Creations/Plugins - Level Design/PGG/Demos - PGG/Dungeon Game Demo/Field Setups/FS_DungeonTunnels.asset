@@ -1373,7 +1373,7 @@ MonoBehaviour:
     Name: Wall-Base
     SpawnerTag: Wall
     StampPrefabID: 0
-    Parent: {fileID: 11400000, guid: 2778f4e34751bb341b87d0a3d3a6a9e2, type: 2}
+    Parent: {fileID: 9063430128532023327}
     Rules:
     - {fileID: 9034513453344007269}
     - {fileID: 7787048315036503549}
@@ -1526,7 +1526,7 @@ MonoBehaviour:
     Name: Wall-Base
     SpawnerTag: Wall
     StampPrefabID: 0
-    Parent: {fileID: 11400000, guid: 2778f4e34751bb341b87d0a3d3a6a9e2, type: 2}
+    Parent: {fileID: 9063430128532023327}
     Rules:
     - {fileID: 9034513453344007269}
     - {fileID: 7787048315036503549}
@@ -1606,7 +1606,7 @@ MonoBehaviour:
     Name: Wall-Base
     SpawnerTag: Wall
     StampPrefabID: 0
-    Parent: {fileID: 11400000, guid: 2778f4e34751bb341b87d0a3d3a6a9e2, type: 2}
+    Parent: {fileID: 9063430128532023327}
     Rules:
     - {fileID: 9034513453344007269}
     - {fileID: 7787048315036503549}

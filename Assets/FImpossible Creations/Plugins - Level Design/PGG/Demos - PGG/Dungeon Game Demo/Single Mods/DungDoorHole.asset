@@ -22,11 +22,10 @@ MonoBehaviour:
   DrawObjectStamps: 1
   OMultiStamp: {fileID: 0}
   PrefabsList:
-  - Prefab: {fileID: 6496295155204845204, guid: b87f6d76e9e363f4d8293d5a8d2ac3cf,
-      type: 3}
+  - Prefab: {fileID: 6496295155204845204, guid: b87f6d76e9e363f4d8293d5a8d2ac3cf, type: 3}
+    MainCollider: {fileID: 0}
     subID: 0
-    _refMesh: {fileID: 8568771882487935041, guid: 12bdb1582ddc2bd4d9248e99494e1b8e,
-      type: 3}
+    _refMesh: {fileID: 8568771882487935041, guid: 12bdb1582ddc2bd4d9248e99494e1b8e, type: 3}
     _refCol: {fileID: 0}
   DrawMultiObjectStamps: 1
   Spawners:
@@ -41,17 +40,23 @@ MonoBehaviour:
     - {fileID: -4713417895049628326, guid: 3b4e5513423863145ad2bba145e1e70d, type: 2}
     Mode: 3
     CellCheckMode: 0
-    GridScaling: 0
+    _Editor_SpawnerAdvancedOptionsFoldout: 0
     OnScalledGrid: 1
     Repeat: 1
+    DontInheritRotations: 0
     MultipleToSpawn: 0
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
     ScaleAccess: 1
     DisplayPreviewGUI: 1
     IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 0
   VariantOf: {fileID: 11400000, guid: 3b4e5513423863145ad2bba145e1e70d, type: 2}
   _editor_drawStamp: 1
   _editor_drawSpawners: 1
+  _editor_drawGlobalRules: 0
+  _editor_drawModPackRules: 0
   _editor_shareSelected: 0
   ParentPreset: {fileID: 11400000, guid: dcf66c3dfe0aef34e9f9693572dda7fd, type: 2}
-  ParentPack: {fileID: 6324579637144589045, guid: 12e73cd70f60cb04083024599008d4c5,
-    type: 2}
+  ParentPack: {fileID: 6324579637144589045, guid: 12e73cd70f60cb04083024599008d4c5, type: 2}

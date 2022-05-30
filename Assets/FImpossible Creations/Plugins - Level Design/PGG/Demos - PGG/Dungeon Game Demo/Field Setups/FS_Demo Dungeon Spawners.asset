@@ -236,8 +236,8 @@ MonoBehaviour:
     DisplayPreviewGUI: 1
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 0
-  CellAllow: 0
-  AllConditionsMet: 1
+  CellAllow: 1
+  AllConditionsMet: 0
   Count:
     Min: 2
     Max: 4
@@ -291,7 +291,7 @@ MonoBehaviour:
     DisplayPreviewGUI: 1
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 0
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   Count:
     Min: 1
@@ -460,7 +460,7 @@ MonoBehaviour:
     DisplayPreviewGUI: 1
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 0
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   CheckedCellsMustBe: 2
   NeightbourNeeds: 0
@@ -739,7 +739,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: dcf66c3dfe0aef34e9f9693572dda7fd, type: 2}
+  ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: -5995147623644665421}
 --- !u!114 &-4182403455301786610
 MonoBehaviour:
@@ -891,7 +891,7 @@ MonoBehaviour:
     DisplayPreviewGUI: 1
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 0
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   Tag: Hole,Key,Important
   CheckMode: 0
@@ -1106,7 +1106,7 @@ MonoBehaviour:
     DisplayPreviewGUI: 1
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 0
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Propability: 0.202
   PropabilityMulVariable:
@@ -1263,7 +1263,7 @@ MonoBehaviour:
     DisplayPreviewGUI: 1
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 0
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   Count:
     Min: 1
@@ -1298,7 +1298,7 @@ MonoBehaviour:
   DrawObjectStamps: 1
   OMultiStamp: {fileID: 0}
   PrefabsList:
-  - Prefab: {fileID: 2002509082697775661, guid: 8ebaa41f8b244184cbaed950a7a77c5d, type: 3}
+  - Prefab: {fileID: 9041122116208626076, guid: 4440aaae053a8e54e8aaec36d5958017, type: 3}
     MainCollider: {fileID: 1074526828067882866, guid: 8ebaa41f8b244184cbaed950a7a77c5d, type: 3}
     subID: 0
     _refMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
@@ -1335,7 +1335,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: 775521f8d1036754caa8397c0338b9d0, type: 2}
+  ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: -5995147623644665421}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -1671,7 +1671,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: dcf66c3dfe0aef34e9f9693572dda7fd, type: 2}
+  ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: -5995147623644665421}
 --- !u!114 &3737668362270842120
 MonoBehaviour:
@@ -1875,7 +1875,7 @@ MonoBehaviour:
     DisplayPreviewGUI: 1
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 0
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   quartRotor:
     q1: 1
@@ -2017,7 +2017,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: dcf66c3dfe0aef34e9f9693572dda7fd, type: 2}
+  ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: -5995147623644665421}
 --- !u!114 &5078128811975809866
 MonoBehaviour:
@@ -2218,7 +2218,7 @@ MonoBehaviour:
     DisplayPreviewGUI: 1
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 0
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   Mode: 4
   Axis: 0
@@ -2288,7 +2288,7 @@ MonoBehaviour:
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
   _editor_shareSelected: 0
-  ParentPreset: {fileID: 11400000, guid: eb40dc6b8bf88c247bbc6e6fe956d3c6, type: 2}
+  ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: -5995147623644665421}
 --- !u!114 &8233154986907813204
 MonoBehaviour:
@@ -2332,7 +2332,7 @@ MonoBehaviour:
     DisplayPreviewGUI: 1
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 0
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   Mode: 4
   Axis: 2
@@ -2468,7 +2468,7 @@ MonoBehaviour:
     DisplayPreviewGUI: 1
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 0
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}

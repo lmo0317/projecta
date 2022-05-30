@@ -20,7 +20,7 @@ MonoBehaviour:
     Duplicates: 2
     DoorHoleCommandID: 0
     CenterFitDoor: 1
-    JustOneDoor: 0
+    JustOneDoor: 1
     DoorConnectionsCount:
       Min: 2
       Max: 3
@@ -30,10 +30,10 @@ MonoBehaviour:
         StartPos: {x: 0, y: 0}
         Width:
           Min: 4
-          Max: 3
+          Max: 8
         Height:
           Min: 3
-          Max: 3
+          Max: 8
       BranchLength:
         Min: 3
         Max: 5
@@ -92,7 +92,7 @@ MonoBehaviour:
           Max: 3
         Height:
           Min: 3
-          Max: 6
+          Max: 3
       BranchLength:
         Min: 3
         Max: 5
@@ -141,10 +141,10 @@ MonoBehaviour:
         StartPos: {x: 0, y: 0}
         Width:
           Min: 4
-          Max: 4
+          Max: 8
         Height:
           Min: 3
-          Max: 6
+          Max: 8
       BranchLength:
         Min: 3
         Max: 5
@@ -214,10 +214,10 @@ MonoBehaviour:
         StartPos: {x: 0, y: 0}
         Width:
           Min: 4
-          Max: 5
+          Max: 8
         Height:
           Min: 3
-          Max: 5
+          Max: 8
       BranchLength:
         Min: 3
         Max: 5
@@ -266,14 +266,14 @@ MonoBehaviour:
           Min: 3
           Max: 4
       BranchLength:
-        Min: 3
-        Max: 4
+        Min: 10
+        Max: 10
       TargetBranches:
         Min: 2
-        Max: 3
-      BranchThickness:
-        Min: 2
         Max: 2
+      BranchThickness:
+        Min: 5
+        Max: 5
       CellSets: []
     OptionalShapePreset: {fileID: 0}
     InjectMods:
