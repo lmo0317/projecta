@@ -43,6 +43,10 @@ namespace TopDownShooter
 
         public float GetHorizontalValue()
         {
+#if UNITY_EDITOR
+            return Input.GetAxis("Horizontal");
+#endif
+
             if (UseVirtualJoyStick)
             {
                 return JoystickControllerLeft.Horizontal;
@@ -53,6 +57,10 @@ namespace TopDownShooter
 
         public float GetVerticalValue()
         {
+#if UNITY_EDITOR
+            return Input.GetAxis("Vertical");
+#endif
+
             if (UseVirtualJoyStick)
             {
                 return JoystickControllerLeft.Vertical;

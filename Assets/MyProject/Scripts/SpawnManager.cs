@@ -1,38 +1,39 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+public class EnemyManager
 {
-    public GameObject enemyPrefab;
+    private static readonly Lazy<EnemyManager> instance = new Lazy<EnemyManager>(() => new EnemyManager());
 
-    public float RespawnTime = 3;
+    private List<GameObject> _enemys = new List<GameObject>();
 
-    public GameObject[] spawnPositions;
-
-
-    //private
-    private float _spawnTime = 0;
-
-    // Start is called before the first frame update
-    void Start()
+    public static EnemyManager Instance
     {
-        _spawnTime = 0;
+        get { return instance.Value; }
     }
 
-    // Update is called once per frame
-    void Update()
+    private EnemyManager()
     {
-        _spawnTime += Time.deltaTime;
 
-        if (_spawnTime > RespawnTime)
+    }
+
+    public void AddEnemy(GameObject enemy)
+    {
+        _enemys.Add(enemy);
+        Debug.Log($"AddEnemy [{_enemys.Count}]");
+    }
+
+    public void KillEnemy(GameObject enemy)
+    {
+        foreach (var e in _enemys)
         {
-            int idx = Random.Range(0, spawnPositions.Length);
-            GameObject spawnPosition = spawnPositions[idx];
-
-            Instantiate(enemyPrefab, spawnPosition.transform.position, spawnPosition.transform.rotation);
-
-            _spawnTime = 0.0f;
+            if(e == enemy)
+            {
+                _enemys.Remove(e);
+                break;
+            }
         }
     }
 }

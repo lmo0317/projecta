@@ -36,8 +36,8 @@ MonoBehaviour:
           Min: 3
           Max: 4
       BranchLength:
-        Min: 8
-        Max: 8
+        Min: 12
+        Max: 12
       TargetBranches:
         Min: 1
         Max: 1

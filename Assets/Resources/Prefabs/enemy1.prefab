@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 368223850927136809}
   - component: {fileID: 8849957219863384986}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: enemy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
   CurrentHP: 0
   CurrentHitPointImage: {fileID: 9041122116584759858}
   state: 0
-  traceDist: 10
+  traceDist: 20
   attackDist: 2
   isDie: 0
 --- !u!114 &9041122116208626078
