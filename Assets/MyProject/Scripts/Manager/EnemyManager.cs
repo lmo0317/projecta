@@ -22,7 +22,6 @@ public class EnemyManager
     public void AddEnemy(GameObject enemy)
     {
         _enemys.Add(enemy);
-        Debug.Log($"AddEnemy [{_enemys.Count}]");
     }
 
     public void KillEnemy(GameObject enemy)
@@ -35,5 +34,10 @@ public class EnemyManager
                 break;
             }
         }
+    }
+
+    public int GetRemainEnemeyCount()
+    {
+        return _enemys.Count;
     }
 }

@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328db119f09c68e41bd2b502dc1f3104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxCount: 1
 --- !u!135 &374449931560875233
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -55,5 +56,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}

@@ -70,7 +70,7 @@ MonoBehaviour:
   CurrentHP: 0
   CurrentHitPointImage: {fileID: 9041122116584759858}
   state: 0
-  traceDist: 20
+  traceDist: 15
   attackDist: 2
   isDie: 0
 --- !u!114 &9041122116208626078
