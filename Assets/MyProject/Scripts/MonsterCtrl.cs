@@ -15,8 +15,11 @@ public class MonsterCtrl : MonoBehaviour
     [Tooltip("PopUpText prefab")]
     public GameObject PopUpPrefab;
 
-    [Tooltip("PopUpText Color")] public Color PopUpTextColor = Color.red;
-    [Tooltip("PopUpText fade time")] public float FadeTime = 0.5f;
+    [Tooltip("PopUpText Color")] 
+    public Color PopUpTextColor = Color.red;
+    
+    [Tooltip("PopUpText fade time")] 
+    public float FadeTime = 0.5f;
 
     public float MaxHP = 100;
     public float CurrentHP = 0;
@@ -123,6 +126,7 @@ public class MonsterCtrl : MonoBehaviour
     {
         //you can add dead animation on this place
         Destroy(gameObject, 0);
+        EnemyManager.Instance.KillEnemy(this);
     }
 
     void Start()

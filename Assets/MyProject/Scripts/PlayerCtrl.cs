@@ -27,7 +27,5 @@ public class PlayerCtrl : MonoBehaviour
         {
             currHp -= 10.0f;
         }
-
-        Debug.Log("PlayerCtrl::OntriggerEnter");
     }
 }

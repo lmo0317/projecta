@@ -5,7 +5,13 @@ using UnityEngine;
 
 public class SpawnZone : MonoBehaviour
 {
-    private GameObject prefab;
+    enum SpawnType
+    {
+        Start,
+        Touch
+    }
+
+    private GameObject _prefab;
     private SphereCollider _sphereCollider;
 
     [SerializeField]
@@ -22,7 +28,7 @@ public class SpawnZone : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        prefab = Resources.Load<GameObject>("Prefabs/enemy1");
+        _prefab = Resources.Load<GameObject>("Prefabs/enemy1");
         _sphereCollider = transform.GetComponent<SphereCollider>();
 
         if (_spawnType == SpawnType.Start)
@@ -54,9 +60,9 @@ public class SpawnZone : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        var enemy = Instantiate(prefab, transform.position, transform.rotation);
-        EnemyManager.Instance.AddEnemy(enemy);
-
+        var enemy = Instantiate(_prefab, transform.position, transform.rotation);
+        var control = enemy.GetComponent<MonsterCtrl>();
+        EnemyManager.Instance.AddEnemy(control);
         Destroy(gameObject);
     }
 }

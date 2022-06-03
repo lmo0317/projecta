@@ -7,9 +7,4 @@ using System.Threading.Tasks;
 namespace Consts
 {
 
-    enum SpawnType
-    {
-        Start,
-        Touch
-    }
 }
