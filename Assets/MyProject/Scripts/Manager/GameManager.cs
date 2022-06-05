@@ -32,6 +32,6 @@ public class GameManager
 
     public void NextStage()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("GameScene2");
     }
 }

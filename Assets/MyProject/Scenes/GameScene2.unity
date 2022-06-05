@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0.754717, g: 0, b: 0.0585045, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -27006,10 +27006,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 985844806}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 5}
+  m_Size: {x: 2, y: 6, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &988639553
 PrefabInstance:
@@ -56238,7 +56238,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.5849056, g: 0.58203447, b: 0.46718875, a: 1}
   m_Intensity: 1.2
   m_Range: 10
   m_SpotAngle: 30
@@ -61396,14 +61396,6 @@ PrefabInstance:
       propertyPath: JoystickControllerRight
       value: 
       objectReference: {fileID: 1552231971}
-    - target: {fileID: 2071066512132281663, guid: 4dbbb84fb635f904d81c0af87256997e, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2629232084709491715, guid: 4dbbb84fb635f904d81c0af87256997e, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2703857992480159821, guid: 4dbbb84fb635f904d81c0af87256997e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -61450,10 +61442,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2707456638663493441, guid: 4dbbb84fb635f904d81c0af87256997e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4549928018361775182, guid: 4dbbb84fb635f904d81c0af87256997e, type: 3}
-      propertyPath: StartWeaponIndex
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
