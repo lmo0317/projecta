@@ -1,15 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using NavMeshBuilder = UnityEngine.AI.NavMeshBuilder;
 
-public class GameManager : MonoBehaviour
+public class GameManager
 {
+    private static readonly Lazy<GameManager> instance = new Lazy<GameManager>(() => new GameManager());
+
+    public static GameManager Instance
+    {
+        get { return instance.Value; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        //NavMeshBuilder.UpdateNavMeshData()
+
     }
 
     // Update is called once per frame
@@ -19,6 +26,11 @@ public class GameManager : MonoBehaviour
     }
 
     public void Retry()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
+
+    public void NextStage()
     {
         SceneManager.LoadScene("GameScene");
     }

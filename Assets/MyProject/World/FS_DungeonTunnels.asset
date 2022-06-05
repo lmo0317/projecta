@@ -739,7 +739,7 @@ MonoBehaviour:
     DisplayPreviewGUI: 1
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 0
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   OffsetCellMode: 0
   OffsetCell: {x: 0, y: 0, z: 0}
@@ -1612,22 +1612,22 @@ MonoBehaviour:
   DrawObjectStamps: 1
   OMultiStamp: {fileID: 0}
   PrefabsList:
-  - Prefab: {fileID: 3365684011197413729, guid: 99dee7ecb74670f4e849b21dbeb6bf01, type: 3}
+  - Prefab: {fileID: 6229247520373792897, guid: 3ad7a1cffb2556547a8b7e60fd320431, type: 3}
     MainCollider: {fileID: -6402384711920371341, guid: 99dee7ecb74670f4e849b21dbeb6bf01, type: 3}
     subID: 0
     _refMesh: {fileID: -5495902117074765545, guid: 64fcd2652b495ca44945c63b46553d57, type: 3}
     _refCol: {fileID: -6402384711920371341, guid: 99dee7ecb74670f4e849b21dbeb6bf01, type: 3}
-  - Prefab: {fileID: 6008907310162907614, guid: 66f77214dcd9c15499a15b9711ac7319, type: 3}
+  - Prefab: {fileID: 9100508158649072905, guid: e348e7143b6247b488737e4be26fb038, type: 3}
     MainCollider: {fileID: 6550554562988119989, guid: 66f77214dcd9c15499a15b9711ac7319, type: 3}
     subID: 0
     _refMesh: {fileID: -5495902117074765545, guid: 6c8146e3c8e6a5e4b9e35cb85452d0be, type: 3}
     _refCol: {fileID: 6550554562988119989, guid: 66f77214dcd9c15499a15b9711ac7319, type: 3}
-  - Prefab: {fileID: 7123659065733116465, guid: a30a8889776c8344bbea8057782621e8, type: 3}
+  - Prefab: {fileID: 16038835297913163, guid: 7c7baabdbc078cb4098d5880fc72c0f3, type: 3}
     MainCollider: {fileID: 0}
     subID: 0
     _refMesh: {fileID: -5495902117074765545, guid: 935dbe748c543774a828530f338c335c, type: 3}
     _refCol: {fileID: 0}
-  - Prefab: {fileID: 7758877746660013494, guid: 8ad83fb792a9c3f4c9ce31cc4bf56c5f, type: 3}
+  - Prefab: {fileID: 8060405944448375545, guid: 7970c12d6b19a504fbc82353b8a43abe, type: 3}
     MainCollider: {fileID: 0}
     subID: 0
     _refMesh: {fileID: -387298209978578080, guid: 51ee6a20cbe07dc409e49bf131f82937, type: 3}
