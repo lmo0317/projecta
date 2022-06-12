@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class EnemyPanel : MonoBehaviour
 {
     [SerializeField]
-    private Text _remainCount;
+    private TextMeshProUGUI _remainCount;
 
     void Start()
     {
@@ -18,6 +19,6 @@ public class EnemyPanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _remainCount.text = $"REMAIN = [{EnemyManager.Instance.GetRemainEnemeyCount()}]";
+        _remainCount.text = $"{EnemyManager.Instance.GetRemainEnemeyCount()}";
     }
 }
