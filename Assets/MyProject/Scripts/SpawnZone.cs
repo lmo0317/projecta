@@ -23,7 +23,9 @@ public class SpawnZone : MonoBehaviour
     [SerializeField]
     private SpawnType _spawnType = SpawnType.Start;
 
-    private int _spawnedCount = 0;
+    private bool _isSpawned = false;
+
+    private List<MonsterCtrl> _spawndMonsterList = new();
 
     private void OnDrawGizmos()
     {
@@ -42,9 +44,20 @@ public class SpawnZone : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (_isSpawned && IsClear())
+        {
+            Destroy(gameObject);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (_spawnType == SpawnType.Touch)
+        if (_isSpawned)
+            return;
+
+        if (_spawnType == SpawnType.Touch && other.gameObject.tag == "Player")
         {
             SpawnEnemy();
         }
@@ -57,7 +70,7 @@ public class SpawnZone : MonoBehaviour
             SpawnEnemyImpl();
         }
 
-        Destroy(gameObject);
+        _isSpawned = true;
     }
 
     private void SpawnEnemyImpl()
@@ -65,6 +78,18 @@ public class SpawnZone : MonoBehaviour
         var offset = new Vector3(UnityEngine.Random.RandomRange(0, _range), 0, UnityEngine.Random.RandomRange(0, _range));
         var enemy = Instantiate(_prefab, transform.position + offset, transform.rotation);
         var control = enemy.GetComponent<MonsterCtrl>();
-        EnemyManager.Instance.AddEnemy(control);
+        _spawndMonsterList.Add(control);
+    }
+
+    public bool IsClear()
+    {
+        foreach (var monster in _spawndMonsterList)
+        {
+            if (monster != null)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }

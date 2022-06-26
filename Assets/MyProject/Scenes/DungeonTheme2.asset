@@ -78,15 +78,15 @@ MonoBehaviour:
   caption: Game Object Node
   bounds:
     serializedVersion: 2
-    x: -2.3338623
-    y: -484.28113
+    x: -678.33386
+    y: -505.28113
     width: 120
     height: 120
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 591
+  zIndex: 644
   inputPins:
   - {fileID: 1880895728874880050}
   outputPins:
@@ -400,15 +400,15 @@ MonoBehaviour:
   caption: Game Object Node
   bounds:
     serializedVersion: 2
-    x: -261.06116
-    y: -502.74078
+    x: -843.06116
+    y: -514.7408
     width: 120
     height: 120
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 593
+  zIndex: 643
   inputPins:
   - {fileID: 4857611798331468455}
   outputPins:
@@ -500,7 +500,7 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 581
+  zIndex: 639
   inputPins:
   - {fileID: 2563746898886351506}
   outputPins:
@@ -510,7 +510,7 @@ MonoBehaviour:
     e00: 1
     e01: 0
     e02: 0
-    e03: 2
+    e03: 2.5
     e10: 0
     e11: 1
     e12: 0
@@ -518,7 +518,7 @@ MonoBehaviour:
     e20: 0
     e21: 0
     e22: 1
-    e23: -2
+    e23: -2.5
     e30: 0
     e31: 0
     e32: 0
@@ -921,7 +921,7 @@ MonoBehaviour:
   indexCounter:
     index: 49
   topZIndex:
-    index: 636
+    index: 648
   nodes:
   - {fileID: 114137115721419502}
   - {fileID: 114730000611149214}
@@ -983,15 +983,15 @@ MonoBehaviour:
   caption: WallSeparator
   bounds:
     serializedVersion: 2
-    x: 0
-    y: -604
+    x: -676
+    y: -625
     width: 120
     height: 50
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 590
+  zIndex: 645
   inputPins: []
   outputPins:
   - {fileID: 114882201949696542}
@@ -1174,15 +1174,15 @@ MonoBehaviour:
   caption: WallRoom
   bounds:
     serializedVersion: 2
-    x: -248
-    y: -608
+    x: -830
+    y: -620
     width: 120
     height: 50
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 592
+  zIndex: 642
   inputPins: []
   outputPins:
   - {fileID: 114677219457791216}
@@ -1302,8 +1302,8 @@ MonoBehaviour:
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
-  selected: 1
-  zIndex: 636
+  selected: 0
+  zIndex: 638
   inputPins:
   - {fileID: 2345129879111906741}
   outputPins:
@@ -1489,7 +1489,7 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 586
+  zIndex: 640
   inputPins:
   - {fileID: 2733927179280046647}
   outputPins:
@@ -1866,8 +1866,8 @@ MonoBehaviour:
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
-  selected: 0
-  zIndex: 551
+  selected: 1
+  zIndex: 648
   inputPins:
   - {fileID: -4579194885149714561}
   outputPins:

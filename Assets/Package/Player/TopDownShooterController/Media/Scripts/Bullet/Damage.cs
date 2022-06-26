@@ -73,6 +73,7 @@ namespace TopDownShooter
         {
             if (_impact) return;
             _impact = true;
+
             Instantiate(BulletImpact, other.contacts[0].point, BulletImpact.transform.rotation);
             if (ExplodeDamageBullet)
             {

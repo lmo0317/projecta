@@ -5,7 +5,7 @@ using UnityEngine;
 public class Gate : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _door;
+    private List<GameObject> _spawnZones;
 
     private bool _isOpen = false;
 
@@ -17,26 +17,23 @@ public class Gate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( EnemyManager.Instance.GetRemainEnemeyCount() <= 0 )
+        if(IsEverySpawnZoneClear() == true && _isOpen == false)
         {
-            _door.SetActive(false);
             _isOpen = true;
+            Destroy(gameObject);
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    public bool IsEverySpawnZoneClear()
     {
-        if(_isOpen)
+        foreach (var spawnZone in _spawnZones)
         {
-            GameManager.Instance.NextStage();
+            if (spawnZone != null)
+            {
+                return false;
+            }
         }
-    }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (_isOpen)
-        {
-            GameManager.Instance.NextStage();
-        }
+        return true;
     }
 }

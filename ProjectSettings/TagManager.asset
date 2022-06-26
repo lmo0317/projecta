@@ -8,6 +8,8 @@ TagManager:
   - BULLET
   - PUNCH
   - MONSTER
+  - FX
+  - SpawnZone
   layers:
   - Default
   - TransparentFX
