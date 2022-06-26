@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.05, y: 0.05, z: -0.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,14 +64,14 @@ MonoBehaviour:
     WeaponClass: 1
     WeaponPrefab: {fileID: 1097170376144410, guid: dd39d4c1447a83e42bac39fe87cb0f80, type: 3}
     WeaponImage: {fileID: 21300000, guid: 02f6fc97fff373649b4cd7c933ebbc90, type: 3}
-    MuzzleEffect: {fileID: 1890411601549848, guid: 373f2f7ba06ba754883ae91a8b653e4c, type: 3}
-    WeaponMagazine: 10
+    MuzzleEffect: {fileID: 1000012903210382, guid: 01e91ba42e028824b86d47ee5f416589, type: 3}
+    WeaponMagazine: 300
     ReloadTime: 3
-    FireRate: 0.5
+    FireRate: 0.1
     BulletId: 1
-    Bullet: {fileID: 1918596692443766, guid: 4b5ca146c4348dc47a95937472314e57, type: 3}
-    Damage: 20
-    BulletSpeed: 100
+    Bullet: {fileID: 1770173410670346, guid: 5d3a6f61a3e25654c88a36852ccd3afd, type: 3}
+    Damage: 50
+    BulletSpeed: 200
     DelayToLaunch: 0
     DelayToTurn: 0
     WeaponDrop: {fileID: 1154566298408816, guid: 005e5911966ee924d8b4c52b9959e7e0, type: 3}
