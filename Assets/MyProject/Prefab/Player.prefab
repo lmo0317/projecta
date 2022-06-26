@@ -13574,7 +13574,7 @@ GameObject:
   m_Layer: 0
   m_Name: WeaponPosition
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -13590,7 +13590,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4667961996620401078}
+  m_Father: {fileID: 4667640714963532176}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7057501250461334556
@@ -14254,9 +14254,9 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: ada1834841d702f4abc40640a6979f54, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33327bc9948cc644ca0f4b1963219c08, type: 3}
---- !u!4 &4667961996620401078 stripped
+--- !u!4 &4667640714963532176 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4490643112653536, guid: 33327bc9948cc644ca0f4b1963219c08, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4169362731877062, guid: 33327bc9948cc644ca0f4b1963219c08, type: 3}
   m_PrefabInstance: {fileID: 4668010165493037910}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &4672965414644675584 stripped
