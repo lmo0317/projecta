@@ -388,7 +388,7 @@ namespace TopDownShooter
                 Instantiate(DashEffect, transform.position, transform.rotation);
             }
 
-            SetDashAnimation();
+            //SetDashAnimation();
             StartCoroutine(Dashing(DashForce / 10));
 
             if (_direction != Vector3.zero && _move != Vector3.zero)
@@ -558,7 +558,7 @@ namespace TopDownShooter
         //dash coroutine.
         private IEnumerator Dashing(float time)
         {
-            CanControl = false;
+            //CanControl = false;
             if (!_controller.isGrounded)
             {
                 Gravity = 0;
@@ -567,7 +567,7 @@ namespace TopDownShooter
 
             //animate hear to true
             yield return new WaitForSeconds(time);
-            CanControl = true;
+            //CanControl = true;
             //animate hear to false
             Gravity = _gravity;
         }
