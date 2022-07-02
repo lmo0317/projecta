@@ -556,7 +556,7 @@ namespace TopDownShooter
             GameObject dashEffect = null;
             if (DashEffect)
             {
-                dashEffect = Instantiate(DashEffect, transform.position, transform.rotation, transform);
+                dashEffect = Instantiate(DashEffect, transform.position, transform.rotation);
             }
 
             //CanControl = false;

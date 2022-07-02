@@ -24438,7 +24438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4886907558839700797}
   m_Layer: 0
-  m_Name: Effect_16_WarpArrive_Backup
+  m_Name: Effect_16_WarpArrive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

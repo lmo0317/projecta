@@ -57,8 +57,8 @@ MonoBehaviour:
   CurrentHP: 0
   AttackDummy: {fileID: 0}
   state: 0
-  traceDist: 10
-  attackDist: 2
+  traceDist: 20
+  attackDist: 4
   isDie: 0
 --- !u!95 &368223850927136809
 Animator:
