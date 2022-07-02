@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 using UnityEngine.AI;
 using TopDownShooter;
 
-public partial class MonsterCtrl : MonoBehaviour
+public partial class Monster : MonoBehaviour
 {
     [Header("PopUpText Settings")]
     [Tooltip("PopUpText prefab")]
@@ -27,6 +27,8 @@ public partial class MonsterCtrl : MonoBehaviour
     public Image CurrentHitPointImage;
 
     private float _hitRatio;
+
+    public GameObject Model;
 
     public enum State
     {
@@ -204,5 +206,25 @@ public partial class MonsterCtrl : MonoBehaviour
         agent.isStopped = true;
         anim.SetFloat(hashSpeed, Random.Range(0.8f, 1.2f));
         anim.SetTrigger(hashPlayerDie);
+    }
+
+    public void AnimationEventHandler(string param1)
+    {
+        Debug.Log($"AnimationEventHandler : {param1}");
+        StartCoroutine(GenerateBoxCollider());
+    }
+
+    private IEnumerator GenerateBoxCollider()
+    {
+        BoxCollider boxCollider = gameObject.AddComponent<BoxCollider>();
+        boxCollider.center = Model.transform.localPosition;
+        boxCollider.size = new Vector3(4, 4, 4);
+        boxCollider.isTrigger = true;
+        boxCollider.tag = "ATTACK_COLLIDER";
+
+        yield return new WaitForSeconds(0.2f);
+
+        Destroy(boxCollider);
+        yield return null;
     }
 }

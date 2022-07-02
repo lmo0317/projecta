@@ -7,7 +7,7 @@ public class EnemyManager
 {
     private static readonly Lazy<EnemyManager> instance = new Lazy<EnemyManager>(() => new EnemyManager());
 
-    private List<MonsterCtrl> _enemys = new List<MonsterCtrl>();
+    private List<Monster> _enemys = new List<Monster>();
 
     public static EnemyManager Instance
     {
@@ -19,12 +19,12 @@ public class EnemyManager
 
     }
 
-    public void AddEnemy(MonsterCtrl enemy)
+    public void AddEnemy(Monster enemy)
     {
         _enemys.Add(enemy);
     }
 
-    public void KillEnemy(MonsterCtrl enemy)
+    public void KillEnemy(Monster enemy)
     {
         foreach (var e in _enemys)
         {

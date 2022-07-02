@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public partial class MonsterCtrl : MonoBehaviour
+public partial class Monster : MonoBehaviour
 {
     void OnDrawGizmos()
     {

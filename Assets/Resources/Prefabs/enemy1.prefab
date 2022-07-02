@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9041122116208626079}
   - component: {fileID: 3455902420455271588}
-  - component: {fileID: 9041122116208626078}
   - component: {fileID: 368223850927136809}
   - component: {fileID: 8849957219863384986}
   - component: {fileID: 4943339253794025276}
@@ -28,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9041122116208626076}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.9710178, y: 4.6421866, z: -16.129683}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
@@ -47,36 +46,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 9041122116208626076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 774dbf102e43c674898ea3893710f00f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8fd10c1bcc8d94aacb3633d574d866cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PopUpPrefab: {fileID: 1156348031185224, guid: 2ceac868d1282cc48bb98d72fb84f343, type: 3}
+  PopUpPrefab: {fileID: 0}
   PopUpTextColor: {r: 1, g: 0, b: 0, a: 1}
   FadeTime: 0.5
   MaxHP: 100
   CurrentHP: 0
-  CurrentHitPointImage: {fileID: 9041122116584759858}
+  CurrentHitPointImage: {fileID: 0}
+  Model: {fileID: 1387880613125285672}
   state: 0
-  traceDist: 15
-  attackDist: 2
+  traceDist: 10
+  attackDist: 4
   isDie: 0
---- !u!114 &9041122116208626078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9041122116208626076}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b1767c1e5e33e241a8f17ea1624dfa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DamageColor: {r: 0.11724138, g: 0, b: 1, a: 1}
-  DamageBorderPulseAmount: 4
-  DamageFadeDuration: 0.15
-  BorderRenderers:
-  - {fileID: 1346225323313434672}
 --- !u!95 &368223850927136809
 Animator:
   serializedVersion: 4
@@ -456,9 +439,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
---- !u!137 &1346225323313434672 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 137976475885954992, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
+--- !u!1 &1387880613125285672 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1774625739149480, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
   m_PrefabInstance: {fileID: 1388498550457988992}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1393194135077484024 stripped

@@ -2,30 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCtrl : MonoBehaviour
+public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private readonly float initHp = 100.0f;
+    public float InitHp = 100.0f;
 
     public float currHp;
 
     void Start()
     {
-        currHp = initHp;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        currHp = InitHp;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(currHp >= 0.0f && other.CompareTag("PUNCH"))
+        if(currHp >= 0.0f && other.CompareTag("ATTACK_COLLIDER"))
         {
             currHp -= 10.0f;
+            if(currHp < 0)
+            {
+                SetStateDie();
+            }
         }
+    }
+
+    private void SetStateDie()
+    {
+
     }
 }

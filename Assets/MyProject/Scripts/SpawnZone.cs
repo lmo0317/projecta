@@ -25,7 +25,7 @@ public class SpawnZone : MonoBehaviour
 
     private bool _isSpawned = false;
 
-    private List<MonsterCtrl> _spawndMonsterList = new();
+    private List<Monster> _spawndMonsterList = new();
 
     private void OnDrawGizmos()
     {
@@ -77,7 +77,7 @@ public class SpawnZone : MonoBehaviour
     {
         var offset = new Vector3(UnityEngine.Random.RandomRange(0, _range), 0, UnityEngine.Random.RandomRange(0, _range));
         var enemy = Instantiate(_prefab, transform.position + offset, transform.rotation);
-        var control = enemy.GetComponent<MonsterCtrl>();
+        var control = enemy.GetComponent<Monster>();
         _spawndMonsterList.Add(control);
     }
 
