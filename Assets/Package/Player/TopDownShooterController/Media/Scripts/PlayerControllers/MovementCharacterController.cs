@@ -383,11 +383,6 @@ namespace TopDownShooter
 
             DashColdown = _dashColdown;
 
-            if (DashEffect)
-            {
-                Instantiate(DashEffect, transform.position, transform.rotation);
-            }
-
             //SetDashAnimation();
             StartCoroutine(Dashing(DashForce / 10));
 
@@ -558,6 +553,12 @@ namespace TopDownShooter
         //dash coroutine.
         private IEnumerator Dashing(float time)
         {
+            GameObject dashEffect = null;
+            if (DashEffect)
+            {
+                dashEffect = Instantiate(DashEffect, transform.position, transform.rotation, transform);
+            }
+
             //CanControl = false;
             if (!_controller.isGrounded)
             {
@@ -567,6 +568,9 @@ namespace TopDownShooter
 
             //animate hear to true
             yield return new WaitForSeconds(time);
+
+            Destroy(dashEffect);
+
             //CanControl = true;
             //animate hear to false
             Gravity = _gravity;
