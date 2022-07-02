@@ -54,10 +54,10 @@ MonoBehaviour:
   FadeTime: 0.5
   MaxHP: 100
   CurrentHP: 0
-  CurrentHitPointImage: {fileID: 0}
+  CurrentHitPointImage: {fileID: 9041122116584759858}
   Model: {fileID: 1387880613125285672}
   state: 0
-  traceDist: 10
+  traceDist: 20
   attackDist: 4
   isDie: 0
 --- !u!95 &368223850927136809

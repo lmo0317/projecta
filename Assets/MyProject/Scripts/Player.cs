@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(currHp >= 0.0f && other.CompareTag("ATTACK_COLLIDER"))
+        if(currHp >= 0.0f && other.CompareTag(TagUtil.TAG_MONSTER_ATTACK_COLLIDER))
         {
             currHp -= 10.0f;
             if(currHp < 0)

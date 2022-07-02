@@ -6,10 +6,8 @@ TagManager:
   tags:
   - Water
   - BULLET
-  - PUNCH
   - MONSTER
-  - FX
-  - SpawnZone
+  - MONSTER_ATTACK_COLLIDER
   layers:
   - Default
   - TransparentFX

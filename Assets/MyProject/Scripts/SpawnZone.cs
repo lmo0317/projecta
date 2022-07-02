@@ -57,7 +57,7 @@ public class SpawnZone : MonoBehaviour
         if (_isSpawned)
             return;
 
-        if (_spawnType == SpawnType.Touch && other.gameObject.tag == "Player")
+        if (_spawnType == SpawnType.Touch && other.gameObject.CompareTag(TagUtil.TAG_PLAYER))
         {
             SpawnEnemy();
         }

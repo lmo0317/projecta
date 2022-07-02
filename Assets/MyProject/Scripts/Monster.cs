@@ -110,7 +110,7 @@ public partial class Monster : MonoBehaviour
     {
         CurrentHP = MaxHP;
         monsterTr = GetComponent<Transform>();
-        playerTr = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        playerTr = GameObject.FindWithTag(TagUtil.TAG_PLAYER).GetComponent<Transform>();
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
 
@@ -174,7 +174,7 @@ public partial class Monster : MonoBehaviour
 
     void OnCollisionEnter(Collision coll)
     {
-        if (coll.collider.CompareTag("BULLET"))
+        if (coll.collider.CompareTag(TagUtil.TAG_BULLET))
         {
             Destroy(coll.gameObject);
             anim.SetTrigger(hashHit);
@@ -182,11 +182,6 @@ public partial class Monster : MonoBehaviour
             Vector3 pos = coll.GetContact(0).point;
             Quaternion rot = Quaternion.LookRotation(-coll.GetContact(0).normal);
             CurrentHP -= 10;
-
-            if (CurrentHP <= 0)
-            {
-                SetStateDie();
-            }
 
             if (coll.transform.GetComponent<Damage>())
             {
@@ -211,7 +206,11 @@ public partial class Monster : MonoBehaviour
     public void AnimationEventHandler(string param1)
     {
         Debug.Log($"AnimationEventHandler : {param1}");
-        StartCoroutine(GenerateBoxCollider());
+
+        if (param1 == "ATTACK")
+        {
+            StartCoroutine(GenerateBoxCollider());
+        }
     }
 
     private IEnumerator GenerateBoxCollider()
@@ -220,7 +219,7 @@ public partial class Monster : MonoBehaviour
         boxCollider.center = Model.transform.localPosition;
         boxCollider.size = new Vector3(4, 4, 4);
         boxCollider.isTrigger = true;
-        boxCollider.tag = "ATTACK_COLLIDER";
+        boxCollider.tag = "MONSTER_ATTACK_COLLIDER";
 
         yield return new WaitForSeconds(0.2f);
 
