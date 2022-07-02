@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
+using Random = UnityEngine.Random;
 using UnityEngine.AI;
 using TopDownShooter;
 
