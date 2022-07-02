@@ -29,7 +29,7 @@ public partial class Monster : MonoBehaviour
     public float CurrentHP = 0;
     private float _hitRatio;
 
-    public GameObject Model;
+    public GameObject AttackDummy;
 
     public enum State
     {
@@ -215,7 +215,7 @@ public partial class Monster : MonoBehaviour
     private IEnumerator GenerateBoxCollider()
     {
         BoxCollider boxCollider = gameObject.AddComponent<BoxCollider>();
-        boxCollider.center = Model.transform.localPosition;
+        boxCollider.center = AttackDummy.transform.localPosition;
         boxCollider.size = new Vector3(4, 4, 4);
         boxCollider.isTrigger = true;
         boxCollider.tag = TagUtil.TAG_MONSTER_ATTACK_COLLIDER;
