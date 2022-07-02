@@ -11,6 +11,7 @@ using TopDownShooter;
 
 public partial class Monster : MonoBehaviour
 {
+    #region damage popup
     [Header("PopUpText Settings")]
     [Tooltip("PopUpText prefab")]
     public GameObject PopUpPrefab;
@@ -21,11 +22,11 @@ public partial class Monster : MonoBehaviour
     [Tooltip("PopUpText fade time")]
     public float FadeTime = 0.5f;
 
+    public Image CurrentHitPointImage;
+    #endregion
+
     public float MaxHP = 100;
     public float CurrentHP = 0;
-
-    public Image CurrentHitPointImage;
-
     private float _hitRatio;
 
     public GameObject Model;
@@ -205,9 +206,7 @@ public partial class Monster : MonoBehaviour
 
     public void AnimationEventHandler(string param1)
     {
-        Debug.Log($"AnimationEventHandler : {param1}");
-
-        if (param1 == "ATTACK")
+        if (param1 == AnimationConsts.ANIMATION_EVENT_ATTACK)
         {
             StartCoroutine(GenerateBoxCollider());
         }
@@ -219,7 +218,7 @@ public partial class Monster : MonoBehaviour
         boxCollider.center = Model.transform.localPosition;
         boxCollider.size = new Vector3(4, 4, 4);
         boxCollider.isTrigger = true;
-        boxCollider.tag = "MONSTER_ATTACK_COLLIDER";
+        boxCollider.tag = TagUtil.TAG_MONSTER_ATTACK_COLLIDER;
 
         yield return new WaitForSeconds(0.2f);
 

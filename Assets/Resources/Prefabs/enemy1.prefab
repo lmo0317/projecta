@@ -49,12 +49,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd10c1bcc8d94aacb3633d574d866cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PopUpPrefab: {fileID: 0}
+  PopUpPrefab: {fileID: 1156348031185224, guid: 2ceac868d1282cc48bb98d72fb84f343, type: 3}
   PopUpTextColor: {r: 1, g: 0, b: 0, a: 1}
   FadeTime: 0.5
+  CurrentHitPointImage: {fileID: 9041122116584759858}
   MaxHP: 100
   CurrentHP: 0
-  CurrentHitPointImage: {fileID: 9041122116584759858}
   Model: {fileID: 1387880613125285672}
   state: 0
   traceDist: 20
