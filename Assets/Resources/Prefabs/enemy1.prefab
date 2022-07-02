@@ -46,7 +46,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9041122116208626076}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fd10c1bcc8d94aacb3633d574d866cf, type: 3}
+  m_Script: {fileID: 11500000, guid: fcf39e57aaa95654f862448fea51ef5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PopUpPrefab: {fileID: 1156348031185224, guid: 2ceac868d1282cc48bb98d72fb84f343, type: 3}
@@ -55,10 +55,10 @@ MonoBehaviour:
   CurrentHitPointImage: {fileID: 9041122116584759858}
   MaxHP: 100
   CurrentHP: 0
-  AttackDummy: {fileID: 1387919705381544492}
+  AttackDummy: {fileID: 0}
   state: 0
-  traceDist: 20
-  attackDist: 4
+  traceDist: 10
+  attackDist: 2
   isDie: 0
 --- !u!95 &368223850927136809
 Animator:
@@ -439,11 +439,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
---- !u!1 &1387919705381544492 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1708149014353324, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
-  m_PrefabInstance: {fileID: 1388498550457988992}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1393194135077484024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4906828391645816, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
