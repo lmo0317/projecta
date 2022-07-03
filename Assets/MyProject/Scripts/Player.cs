@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
 
     public float currHp;
 
+    public GameObject SkillEffect;
+    public GameObject ChangeEffect;
+
     void Start()
     {
         currHp = InitHp;
@@ -30,5 +33,25 @@ public class Player : MonoBehaviour
     private void SetStateDie()
     {
 
+    }
+
+    public void DoSkill()
+    {
+        StartCoroutine(GenerateSkillEffect());
+    }
+
+    public void DoChange()
+    {
+
+    }
+
+    IEnumerator GenerateSkillEffect()
+    {
+        var skillEffect = Instantiate(SkillEffect, transform.position, transform.rotation);
+        yield return new WaitForSeconds(5);
+
+        Destroy(skillEffect);
+
+        yield return null;
     }
 }

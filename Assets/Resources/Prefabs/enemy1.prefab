@@ -55,7 +55,7 @@ MonoBehaviour:
   CurrentHitPointImage: {fileID: 9041122116584759858}
   MaxHP: 100
   CurrentHP: 0
-  AttackDummy: {fileID: 0}
+  AttackDummy: {fileID: 1387919705381544492}
   state: 0
   traceDist: 20
   attackDist: 4
@@ -439,6 +439,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
+--- !u!1 &1387919705381544492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1708149014353324, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
+  m_PrefabInstance: {fileID: 1388498550457988992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1393194135077484024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4906828391645816, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
