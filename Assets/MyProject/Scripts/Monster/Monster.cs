@@ -164,6 +164,16 @@ public partial class Monster : MonoBehaviour
         }
     }
 
+    public void DispatchAnimationEvent(string value)
+    {
+        //EventDispatcher.Instance.DispatchAnimationEvent(value);
+    }
+
+    public void OnAnimationEvent()
+    {
+        StartCoroutine(GenerateBoxCollider());
+    }
+
     private IEnumerator GenerateBoxCollider()
     {
         BoxCollider boxCollider = gameObject.AddComponent<BoxCollider>();

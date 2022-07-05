@@ -20,7 +20,7 @@ public class DebugUI : MonoBehaviour
     {
         if (GUI.Button(new Rect(0, 0, 100, 100), "Debug!"))
         {
-            EventManager.animationEvent.OnNext(10);
+            //EventManager.animationEvent.OnNext(10);
         }
     }
 }

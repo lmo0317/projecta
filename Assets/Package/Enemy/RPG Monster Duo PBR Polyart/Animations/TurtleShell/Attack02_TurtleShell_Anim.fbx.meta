@@ -262,9 +262,9 @@ ModelImporter:
       curves: []
       events:
       - time: 0.36763662
-        functionName: AnimationEventHandler
+        functionName: DispatchAnimationEvent
         data: ATTACK
-        objectReferenceParameter: {fileID: 11500000, guid: 8fd10c1bcc8d94aacb3633d574d866cf, type: 3}
+        objectReferenceParameter: {fileID: 11500000, guid: fcf39e57aaa95654f862448fea51ef5b, type: 3}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
