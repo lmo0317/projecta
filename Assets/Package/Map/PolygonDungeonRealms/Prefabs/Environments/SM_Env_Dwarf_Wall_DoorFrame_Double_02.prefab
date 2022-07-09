@@ -171,12 +171,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1320830273288600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7767810a43182548b447f9599878303, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ed738cf0a38a4d4292d5c5922c3c479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _doors:
-  - {fileID: 1824806959631374}
-  - {fileID: 1910554476088134}
   _spawnZones: []
 --- !u!114 &420228139
 MonoBehaviour:
