@@ -11,30 +11,13 @@ using TopDownShooter;
 
 public partial class Monster : MonoBehaviour
 {
-    #region damage popup
-    [Header("PopUpText Settings")]
-    [Tooltip("PopUpText prefab")]
-    public GameObject PopUpPrefab;
-
-    [Tooltip("PopUpText Color")]
-    public Color PopUpTextColor = Color.red;
-
-    [Tooltip("PopUpText fade time")]
-    public float FadeTime = 0.5f;
-
-    public Image CurrentHitPointImage;
-    #endregion
-
     public float MaxHP = 100;
-    public float CurrentHP = 0;
-    private float _hitRatio;
-
-    public GameObject AttackDummy;
-
-    public MonsterEnum.State state = MonsterEnum.State.IDLE;
+    public float CurrentHP = 0; 
     public float traceDist = 10.0f;
     public float attackDist = 2.0f;
     public bool isDie = false;
+    public GameObject AttackDummy;
+    public MonsterEnum.State state = MonsterEnum.State.IDLE;
 
     //private int hp = 100;
 
@@ -49,6 +32,8 @@ public partial class Monster : MonoBehaviour
     private readonly int hashPlayerDie = Animator.StringToHash("PlayerDie");
     private readonly int hashSpeed = Animator.StringToHash("Speed");
     private readonly int hashDie = Animator.StringToHash("Die");
+
+    private MonsterStatusBarComponent _monsterStatusBarComponent;
 
     void OnEnable()
     {
@@ -67,23 +52,9 @@ public partial class Monster : MonoBehaviour
         playerTr = GameObject.FindWithTag(TagUtil.TAG_PLAYER).GetComponent<Transform>();
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
+        _monsterStatusBarComponent = GetComponent<MonsterStatusBarComponent>();
+        
         StartCoroutine(AIProcess());
-    }
-
-    private void UpdatePointsBars()
-    {
-        _hitRatio = CurrentHP / MaxHP;
-        CurrentHitPointImage.rectTransform.localScale = new Vector3(_hitRatio, 1, 1);
-    }
-
-    private void InstancePopUp(string popUpText)
-    {
-        var poPupText =
-            Instantiate(PopUpPrefab, transform.position + Random.insideUnitSphere * 0.4f,
-                transform.rotation);
-        Destroy(poPupText, FadeTime);
-        poPupText.transform.GetChild(0).GetComponent<TextMesh>().text = popUpText;
-        poPupText.transform.GetChild(0).GetComponent<TextMesh>().color = PopUpTextColor;
     }
 
     IEnumerator AIProcess()
@@ -92,7 +63,8 @@ public partial class Monster : MonoBehaviour
         {
             yield return new WaitForSeconds(0.3f);
 
-            if (state == MonsterEnum.State.DIE) yield break;
+            if (state == MonsterEnum.State.DIE) 
+                yield break;
 
             float distance = Vector3.Distance(playerTr.position, monsterTr.position);
 
@@ -155,40 +127,6 @@ public partial class Monster : MonoBehaviour
         EnemyManager.Instance.KillEnemy(this);
     }
 
-    #region animation event handler
-    public void AnimationEventHandler(string param1)
-    {
-        if (param1 == AnimationConsts.ANIMATION_EVENT_ATTACK)
-        {
-            StartCoroutine(GenerateBoxCollider());
-        }
-    }
-
-    public void DispatchAnimationEvent(string value)
-    {
-        //EventDispatcher.Instance.DispatchAnimationEvent(value);
-    }
-
-    public void OnAnimationEvent()
-    {
-        StartCoroutine(GenerateBoxCollider());
-    }
-
-    private IEnumerator GenerateBoxCollider()
-    {
-        BoxCollider boxCollider = gameObject.AddComponent<BoxCollider>();
-        boxCollider.center = AttackDummy.transform.localPosition;
-        boxCollider.size = new Vector3(4, 4, 4);
-        boxCollider.isTrigger = true;
-        boxCollider.tag = TagUtil.TAG_MONSTER_ATTACK_COLLIDER;
-
-        yield return new WaitForSeconds(0.2f);
-
-        Destroy(boxCollider);
-        yield return null;
-    }
-    #endregion
-
     #region collision handler
     void OnCollisionEnter(Collision coll)
     {
@@ -211,11 +149,11 @@ public partial class Monster : MonoBehaviour
     public void ApplyDamage(float amount)
     {
         CurrentHP -= amount;
-        UpdatePointsBars();
 
-        if (PopUpPrefab)
+        if (_monsterStatusBarComponent)
         {
-            InstancePopUp(amount.ToString(CultureInfo.InvariantCulture));
+            _monsterStatusBarComponent.UpdatePointsBars();
+            _monsterStatusBarComponent.InstancePopUp(amount.ToString(CultureInfo.InvariantCulture));
         }
 
         if (CurrentHP <= 0)

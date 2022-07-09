@@ -8025,6 +8025,7 @@ GameObject:
   - component: {fileID: 1902049534600523897}
   - component: {fileID: 2599733620775468655}
   - component: {fileID: 4549928018361775182}
+  - component: {fileID: 2118733729}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -8117,7 +8118,7 @@ MonoBehaviour:
   JumpHeight: 2
   CanDobleJump: 1
   CanDash: 1
-  DashColdown: 0
+  DashColdown: 1
   DashForce: 5
   Jetpack: 1
   JetPackMaxFuelCapacity: 150
@@ -8131,7 +8132,7 @@ MonoBehaviour:
   PlayerAnimator: {fileID: 4727576379434692638}
   LowZonePosition: {fileID: 5482044511550729330}
   JumpEffect: {fileID: 1794629417277722, guid: 487ddc077da9eea4fab96c2de1c50a6a, type: 3}
-  DashEffect: {fileID: 1794629417277722, guid: 487ddc077da9eea4fab96c2de1c50a6a, type: 3}
+  DashEffect: {fileID: 6094755310478972434, guid: f9a15e3cfd6099341bb54d73262611e6, type: 3}
   JetPackObject: {fileID: 2702638346940186247}
   SlowFallObject: {fileID: 2703502977210860767}
   PlayerController: {fileID: 1902049534600523897}
@@ -8169,6 +8170,22 @@ MonoBehaviour:
   WeaponData: {fileID: 114323996127282120, guid: ec7a9dc351c03c44e81886defc8a9f1d, type: 3}
   PlayerController: {fileID: 1902049534600523897}
   DelayToTurnOn: 0
+--- !u!114 &2118733729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2703857992480159821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74be58a4c12eed043940513387c60d6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitHp: 100
+  currHp: 0
+  SkillEffect: {fileID: 5930128826407468347, guid: 896f2ab952e3aff42b3cd2ee83c16a9e, type: 3}
+  ChangeEffect: {fileID: 0}
 --- !u!1 &2703919197904019543
 GameObject:
   m_ObjectHideFlags: 0
