@@ -57,6 +57,7 @@ namespace TopDownShooter
 
         private void OnTriggerEnter(Collider other)
         {
+            /*
             if (_impact) return;
             _impact = true;
             Instantiate(BulletImpact, other.ClosestPointOnBounds(transform.position), BulletImpact.transform.rotation);
@@ -67,6 +68,7 @@ namespace TopDownShooter
 
             gameObject.SetActive(false);
             Destroy(gameObject, 0.1f);
+            */
         }
 
         private void OnCollisionEnter(Collision other)
