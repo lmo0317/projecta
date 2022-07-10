@@ -8,6 +8,10 @@ TagManager:
   - BULLET
   - MONSTER
   - MONSTER_ATTACK_COLLIDER
+  - SpawnZone
+  - FX
+  - FxTemporaire
+  - GENERATED_COLLIDER
   layers:
   - Default
   - TransparentFX

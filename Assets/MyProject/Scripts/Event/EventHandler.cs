@@ -9,11 +9,6 @@ using System.Collections;
 
 public class EventHandler : MonoBehaviour
 {
-    public void Start()
-    {
-
-        //EventDispatcher.Instance.AnimationEvent.Subscribe(OnAnimationEvent);
-    }
 
     private void OnAnimationEvent(string value)
     {

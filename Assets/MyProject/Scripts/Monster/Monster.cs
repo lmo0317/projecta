@@ -128,22 +128,39 @@ public partial class Monster : MonoBehaviour
     }
 
     #region collision handler
-    void OnCollisionEnter(Collision coll)
+    void OnCollisionEnter(Collision collision)
     {
-        if (coll.collider.CompareTag(TagUtil.TAG_BULLET))
+        if (collision.collider.CompareTag(TagUtil.TAG_BULLET))
         {
-            Destroy(coll.gameObject);
+            Destroy(collision.gameObject);
             anim.SetTrigger(hashHit);
 
-            Vector3 pos = coll.GetContact(0).point;
-            Quaternion rot = Quaternion.LookRotation(-coll.GetContact(0).normal);
+            Vector3 pos = collision.GetContact(0).point;
+            Quaternion rot = Quaternion.LookRotation(-collision.GetContact(0).normal);
             CurrentHP -= 10;
 
-            if (coll.transform.GetComponent<Damage>())
+            if (collision.transform.GetComponent<Damage>())
             {
-                ApplyDamage(coll.transform.GetComponent<Damage>().DamagePower);
+                ApplyDamage(collision.transform.GetComponent<Damage>().DamagePower);
             }
         }
+    }
+
+
+
+    void OnTriggerEnter(Collider collider)
+    {
+        //Debug.Log(coll.gameObject.name);
+        /*
+        var colliderGenerator = collider.GetComponent<ColliderGenerator>();
+        if (colliderGenerator)
+        {
+            if (colliderGenerator.AttackType == ColliderAttackType.PlayerAttack)
+            {
+
+            }
+        }
+        */
     }
 
     public void ApplyDamage(float amount)
@@ -161,11 +178,6 @@ public partial class Monster : MonoBehaviour
             CurrentHP = 0;
             Dead();
         }
-    }
-
-    void OnTriggerEnter(Collider coll)
-    {
-        Debug.Log(coll.gameObject.name);
     }
 
     #endregion

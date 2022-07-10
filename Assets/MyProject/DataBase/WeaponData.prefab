@@ -69,7 +69,7 @@ MonoBehaviour:
     ReloadTime: 3
     FireRate: 0.1
     BulletId: 1
-    Bullet: {fileID: 1770173410670346, guid: 5d3a6f61a3e25654c88a36852ccd3afd, type: 3}
+    Bullet: {fileID: 1770173410670346, guid: 17e56ec86c3872a45a754551043dd5a1, type: 3}
     Damage: 50
     BulletSpeed: 200
     DelayToLaunch: 0

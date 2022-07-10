@@ -7,11 +7,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
 
     public float InitHp = 100.0f;
-
     public float currHp;
-
-    public GameObject SkillEffect;
-    public GameObject ChangeEffect;
 
     void Start()
     {
@@ -30,28 +26,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void SetStateDie()
+    private void SetStateDie() 
     {
 
-    }
-
-    public void DoSkill()
-    {
-        StartCoroutine(GenerateSkillEffect());
-    }
-
-    public void DoChange()
-    {
-
-    }
-
-    IEnumerator GenerateSkillEffect()
-    {
-        var skillEffect = Instantiate(SkillEffect, transform.position, transform.rotation);
-        yield return new WaitForSeconds(5);
-
-        Destroy(skillEffect);
-
-        yield return null;
     }
 }

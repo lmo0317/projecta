@@ -10,4 +10,5 @@ public class TagUtil
     public static readonly string TAG_MONSTER_ATTACK_COLLIDER = "MONSTER_ATTACK_COLLIDER";
     public static readonly string TAG_BULLET = "BULLET";
     public static readonly string TAG_PLAYER = "Player";
+    public static readonly string TAG_GENERATED_COLLIDER = "GENERATED_COLLIDER";
 }
