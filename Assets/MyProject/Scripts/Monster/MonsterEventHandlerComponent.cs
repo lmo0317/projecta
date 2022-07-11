@@ -32,7 +32,7 @@ public class MonsterEventHandlerComponent : MonoBehaviour
         boxCollider.center = _monster.AttackDummy.transform.localPosition;
         boxCollider.size = new Vector3(4, 4, 4);
         boxCollider.isTrigger = true;
-        boxCollider.tag = TagUtil.TAG_MONSTER_ATTACK_COLLIDER;
+        //boxCollider.tag = TagUtil.TAG_MONSTER_ATTACK_COLLIDER;
 
         yield return new WaitForSeconds(0.2f);
 

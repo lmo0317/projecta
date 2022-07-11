@@ -11,6 +11,7 @@ public class PlayerSkillComponent : MonoBehaviour
 {
     public GameObject SkillEffect;
     public GameObject ChangeEffect;
+    public GameObject SkillContainer;
 
     private Player _player;
 
@@ -47,21 +48,25 @@ public class PlayerSkillComponent : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(0 , 0, 0);
         var scale = new Vector3(2.0f, 2.0f, 2.0f);
 
+        //skill container 생성
+        var skillContainer = Instantiate(SkillContainer, _player.transform.position, rotation);
+
         //Effect 생성
-        var skillEffect = Instantiate(SkillEffect, _player.transform.position, rotation);
+        var skillEffect = Instantiate(SkillEffect, skillContainer.transform);
         skillEffect.transform.localScale = scale;
+        skillEffect.transform.rotation = rotation;
 
         //Collider 생성
-        BoxCollider boxCollider = gameObject.AddComponent<BoxCollider>();
+        BoxCollider boxCollider = skillContainer.AddComponent<BoxCollider>();
         boxCollider.center = Vector3.zero;
-        boxCollider.size = new Vector3(20 ,20,20);
+        boxCollider.size = new Vector3(10,10,10);
         boxCollider.isTrigger = true;
-        boxCollider.tag = TagUtil.TAG_GENERATED_COLLIDER;
+
         yield return new WaitForSeconds(2);
         Destroy(boxCollider);
 
         yield return new WaitForSeconds(5);
-        Destroy(skillEffect);
+        Destroy(skillContainer);
 
         yield return null;
     }

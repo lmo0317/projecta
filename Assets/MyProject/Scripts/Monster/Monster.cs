@@ -137,7 +137,7 @@ public partial class Monster : MonoBehaviour
 
             Vector3 pos = collision.GetContact(0).point;
             Quaternion rot = Quaternion.LookRotation(-collision.GetContact(0).normal);
-            CurrentHP -= 10;
+            //CurrentHP -= 10;
 
             if (collision.transform.GetComponent<Damage>())
             {
@@ -150,17 +150,12 @@ public partial class Monster : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        //Debug.Log(coll.gameObject.name);
-        /*
-        var colliderGenerator = collider.GetComponent<ColliderGenerator>();
-        if (colliderGenerator)
+        var skillContainer = collider.GetComponent<SkillContainer>();
+        if(skillContainer)
         {
-            if (colliderGenerator.AttackType == ColliderAttackType.PlayerAttack)
-            {
-
-            }
+            //skill container에서 skill정보 얻어 와서 공격 추가
+            ApplyDamage(10);
         }
-        */
     }
 
     public void ApplyDamage(float amount)
