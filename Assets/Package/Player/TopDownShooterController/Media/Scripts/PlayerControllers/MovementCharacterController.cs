@@ -600,6 +600,11 @@ namespace TopDownShooter
             _invertedControl = false;
         }
 
+        public void SetDeadAnimation()
+        {
+            PlayerAnimator.SetTrigger("Dead");
+        }
+
         #endregion
     }
 }

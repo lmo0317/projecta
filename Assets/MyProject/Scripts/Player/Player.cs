@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using TopDownShooter;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject DamageEffectPrefab;
-    public float InitHp = 100.0f;
+    public float maxHp = 100.0f;
     public float currHp;
+
+    private MovementCharacterController _movementCharacterController;
 
     void Start()
     {
-        currHp = InitHp;
+        currHp = maxHp;
+        _movementCharacterController = GetComponent<MovementCharacterController>();
     }
 
     public void Update()
@@ -28,17 +32,19 @@ public class Player : MonoBehaviour
         var skillContainer = collider.GetComponent<SkillContainer>();
         if (skillContainer && skillContainer.IsMonsterTheOwner() && IsDie() == false)
         {
-            OnDamage();
+            OnDamage(10.0f);
         }
     }
     #endregion
 
-    private void OnDamage()
+    private void OnDamage(float damage)
     {
-        currHp -= 10.0f;
+        currHp -= damage;
+
+        UIManager.Instance.SetHP(currHp/maxHp);
         DamageEffect();
 
-        if (currHp < 0)
+        if (currHp <= 0)
         {
             SetStateDie();
         }
@@ -56,7 +62,7 @@ public class Player : MonoBehaviour
 
     private void SetStateDie() 
     {
-
+        _movementCharacterController.SetDeadAnimation();
     }
 
     public void DoSkill(int id)
