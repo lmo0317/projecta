@@ -16,28 +16,14 @@ public class MonsterEventHandlerComponent : MonoBehaviour
         _monster = GetComponent<Monster>();
     }
 
-
     #region animation event handler
     public void AnimationEventHandler(string param1)
     {
         if (param1 == AnimationConsts.ANIMATION_EVENT_ATTACK)
         {
-            StartCoroutine(GenerateBoxCollider());
+            //var skillEffect = Resources.Load<GameObject>("Prefabs/skill/SwordHitBlue");
+            StartCoroutine(SkillManager.Instance.GenerateSkillEffect(null, _monster));
         }
-    }
-
-    private IEnumerator GenerateBoxCollider()
-    {
-        BoxCollider boxCollider = gameObject.AddComponent<BoxCollider>();
-        boxCollider.center = _monster.AttackDummy.transform.localPosition;
-        boxCollider.size = new Vector3(4, 4, 4);
-        boxCollider.isTrigger = true;
-        //boxCollider.tag = TagUtil.TAG_MONSTER_ATTACK_COLLIDER;
-
-        yield return new WaitForSeconds(0.2f);
-
-        Destroy(boxCollider);
-        yield return null;
     }
     #endregion
 

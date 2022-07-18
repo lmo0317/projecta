@@ -9,8 +9,8 @@ namespace TopDownShooter
     {
         public ShooterController PlayerShooterControllerComponent;
 
-        public Text PlayerBullet1;
-        public Text PlayerBullet2;
+        //public Text PlayerBullet1;
+        //public Text PlayerBullet2;
         public GameObject WeaponButton;
         public Transform ButtonContent;
         public List<WeaponButton> CurrentWeaponsButtons;
@@ -25,8 +25,8 @@ namespace TopDownShooter
                 _lasWeaponCount = PlayerShooterControllerComponent.WeaponsBullets.Count;
             }
 
-            PlayerBullet1.text = PlayerShooterControllerComponent.BulletType[0].BulletInPocket.ToString();
-            PlayerBullet2.text = PlayerShooterControllerComponent.BulletType[1].BulletInPocket.ToString();
+            //PlayerBullet1.text = PlayerShooterControllerComponent.BulletType[0].BulletInPocket.ToString();
+            //PlayerBullet2.text = PlayerShooterControllerComponent.BulletType[1].BulletInPocket.ToString();
         }
 
         public void EquipWeapon(int weaponToEquip)

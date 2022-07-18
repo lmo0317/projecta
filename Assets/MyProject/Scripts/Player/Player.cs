@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public GameObject DamageEffectPrefab;
     public float InitHp = 100.0f;
     public float currHp;
 
@@ -14,19 +14,58 @@ public class Player : MonoBehaviour
         currHp = InitHp;
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void Update()
     {
-        if(currHp >= 0.0f && other.CompareTag(TagUtil.TAG_MONSTER_ATTACK_COLLIDER))
+        if (Input.GetKeyDown(KeyCode.K))
         {
-            currHp -= 10.0f;
-            if(currHp < 0)
-            {
-                SetStateDie();
-            }
+            DoSkill(0);
         }
     }
 
+    #region collision
+    private void OnTriggerEnter(Collider collider)
+    {
+        var skillContainer = collider.GetComponent<SkillContainer>();
+        if (skillContainer && skillContainer.IsMonsterTheOwner() && IsDie() == false)
+        {
+            OnDamage();
+        }
+    }
+    #endregion
+
+    private void OnDamage()
+    {
+        currHp -= 10.0f;
+        DamageEffect();
+
+        if (currHp < 0)
+        {
+            SetStateDie();
+        }
+    }
+
+    private void DamageEffect()
+    {
+        Instantiate(DamageEffectPrefab, transform.position, transform.rotation);
+    }
+
+    private bool IsDie()
+    {
+        return currHp <= 0.0f;
+    }
+
     private void SetStateDie() 
+    {
+
+    }
+
+    public void DoSkill(int id)
+    {
+        var skillEffect = Resources.Load<GameObject>("Prefabs/skill/NovaSkillEffect");
+        StartCoroutine(SkillManager.Instance.GenerateSkillEffect(skillEffect, this));
+    }
+
+    public void DoChange()
     {
 
     }

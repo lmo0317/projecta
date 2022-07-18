@@ -13,18 +13,6 @@ public class GameManager
         get { return instance.Value; }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Retry()
     {
         SceneManager.LoadScene("GameScene");
